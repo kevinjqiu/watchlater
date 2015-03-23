@@ -1,0 +1,5 @@
+[podcast]
+name = "Watch Later"
+author = "me@example.com"
+asset_folder = "/path/to/videos"
+server_prefix = "http://mydomain.com/"
