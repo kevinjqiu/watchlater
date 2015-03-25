@@ -1,5 +1,7 @@
-[podcast]
-name = "Watch Later"
-author = "me@example.com"
-asset_folder = "/path/to/videos"
-server_prefix = "http://mydomain.com/"
+title = "Watch Later"
+description = "Watch Later"
+author = "me"
+email = "me@example.com"
+link = "http://example.org"
+asset_folder = "/home/kevin/Videos"
+server_prefix = "http://mydomain.com"
