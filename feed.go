@@ -43,8 +43,12 @@ func (fg FeedGenerator) Generate() (*feeds.Feed, error) {
 		mimeType, _ := magic.MIMETypeFromReader(bufio.NewReader(f))
 		if strings.HasPrefix(mimeType, "audio/") {
 			feed.Items = append(feed.Items, &feeds.Item{
-				Title:       path,
-				Link:        &feeds.Link{Href: "http://example.com"},
+				Title: path,
+				Enclosure: &feeds.Enclosure{
+					Url:    "http://example.com/1",
+					Type:   "audio/mpeg",
+					Length: "10000",
+				},
 				Description: path,
 				Author:      &feeds.Author{"NA", "na@example.com"},
 				Created:     fi.ModTime(),
