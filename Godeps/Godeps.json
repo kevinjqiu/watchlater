@@ -3,6 +3,10 @@
 	"GoVersion": "go1.4.2",
 	"Deps": [
 		{
+			"ImportPath": "camlistore.org/pkg/magic",
+			"Rev": "e987220ad689122128373a953c5ffbef55a654a0"
+		},
+		{
 			"ImportPath": "github.com/BurntSushi/toml",
 			"Comment": "v0.1.0-18-g443a628",
 			"Rev": "443a628bc233f634a75bcbdd71fe5350789f1afa"
@@ -15,6 +19,10 @@
 		{
 			"ImportPath": "github.com/gorilla/feeds",
 			"Rev": "2e133eb352fab1ff3569ee169e9a3a94f69c9081"
+		},
+		{
+			"ImportPath": "github.com/kevinjqiu/feeds",
+			"Rev": "5041dc7ccbb31077273da144ba36f010828f13e2"
 		}
 	]
 }

@@ -8,7 +8,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 	"github.com/codegangsta/cli"
-	"github.com/gorilla/feeds"
+	"github.com/kevinjqiu/feeds"
 )
 
 type Config struct {

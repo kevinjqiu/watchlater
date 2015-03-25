@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gorilla/feeds"
+	"github.com/kevinjqiu/feeds"
 
 	"camlistore.org/pkg/magic"
 )
