@@ -2,9 +2,12 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
+	"net/url"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"time"
 
@@ -14,12 +17,13 @@ import (
 )
 
 type FeedGenerator struct {
-	Root        string
-	Title       string
-	Description string
-	Author      string
-	Email       string
-	Link        string
+	Root         string
+	ServerPrefix string
+	Title        string
+	Description  string
+	Author       string
+	Email        string
+	Link         string
 }
 
 func (fg FeedGenerator) Generate() (*feeds.Feed, error) {
@@ -45,9 +49,9 @@ func (fg FeedGenerator) Generate() (*feeds.Feed, error) {
 			feed.Items = append(feed.Items, &feeds.Item{
 				Title: path,
 				Enclosure: &feeds.Enclosure{
-					Url:    "http://example.com/1",
-					Type:   "audio/mpeg",
-					Length: "10000",
+					Url:    fmt.Sprintf("%s/%s", fg.ServerPrefix, url.QueryEscape(fi.Name())),
+					Type:   mimeType,
+					Length: strconv.FormatInt(fi.Size(), 10),
 				},
 				Description: path,
 				Author:      &feeds.Author{"NA", "na@example.com"},

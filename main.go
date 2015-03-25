@@ -40,11 +40,12 @@ func Run(c *cli.Context) {
 	}
 
 	feedGenerator := FeedGenerator{
-		Root:   config.AssetFolder,
-		Title:  config.Title,
-		Author: config.Author,
-		Email:  config.Email,
-		Link:   config.Link,
+		Root:         config.AssetFolder,
+		Title:        config.Title,
+		Author:       config.Author,
+		Email:        config.Email,
+		Link:         config.Link,
+		ServerPrefix: config.ServerPrefix,
 	}
 
 	feed, err = feedGenerator.Generate()
